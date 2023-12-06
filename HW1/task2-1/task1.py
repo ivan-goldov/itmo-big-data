@@ -3,7 +3,6 @@ import argparse
 from mrjob.job import MRJob, MRStep
 from collections import defaultdict
 
-reducer_output = set()
 class MRTopQuoteCount(MRJob):
     def mapper_init(self):
         self.cnt = defaultdict(int)
